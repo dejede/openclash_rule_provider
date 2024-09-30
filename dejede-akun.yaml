@@ -1,0 +1,39 @@
+proxies:
+- name: SG Trojan-gRPC(2024-10-07)
+  type: trojan
+  server: 172.67.22.129
+  port: 443
+  password: 69449350-7ef3-11ef-905b-1239d0255272
+  sni: sg3.socifiles.com
+  skip-cert-verify: true
+  network: grpc
+  grpc-opts:
+      grpc-service-name: trgrpc
+  udp: true
+
+- name: TrojanBDI
+  type: trojan
+  server: 104.22.21.245
+  port: 443
+  password: c70d79f0-7ef3-11ef-8c40-1239d0255272
+  sni: sg3-trojan.bonds.id
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+      path: "/howdy"
+      headers:
+         Host: sg3-trojan.bonds.id
+  udp: true
+
+- name: US__ Trojan-WS(2024-10-07)
+  type: trojan
+  server: 104.22.21.245
+  port: 443
+  password: a7448390-7ef3-11ef-bbd2-1239d0255272
+  sni: us1.socifiles.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+      path: "/trojanws"
+      headers:
+  udp: true
